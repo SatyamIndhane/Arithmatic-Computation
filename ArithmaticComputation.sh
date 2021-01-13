@@ -9,5 +9,6 @@ read -p "Enter a number: " c;
 var1=$(( a+(b*c) ))
 var2=$(( (a*b)+c ))
 var3=$(( c+(a/b) ))
+var4=$(( c+(a%b) ))
 
-echo $var3
+echo $var4
