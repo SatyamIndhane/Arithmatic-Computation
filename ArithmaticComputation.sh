@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 #Welcome to Arithmatic Computation
 
@@ -6,6 +6,7 @@ declare -A results
 
 usecase=2
 counter=0
+swap=0
 
 read -p "Enter a number: " a;
 read -p "Enter a number: " b;
@@ -27,4 +28,22 @@ do
 done
 
 echo ${valAr[@]}
-echo ${!valAr[@]}
+
+length=${#valAr[@]}
+loop=1
+
+while (( loop<=length ))
+do
+	for (( base=0; base<length-1; base++ ))
+	do
+		if (( ${valAr[base]}<${valAr[$((base+1))]} ))
+		then
+			(( swap=${valAr[base]} ))
+			(( valAr[base]=${valAr[$((base+1))]} ))
+			(( valAr[$((base+1))]=$swap ))
+		fi
+	done
+	((loop++))
+done
+
+echo ${valAr[@]}
