@@ -5,6 +5,7 @@
 declare -A results
 
 usecase=2
+counter=0
 
 read -p "Enter a number: " a;
 read -p "Enter a number: " b;
@@ -20,4 +21,10 @@ results[$((usecase++))]="$var2"
 results[$((usecase++))]="$var3"
 results[$((usecase++))]="$var4"
 
-echo Use cases ${!results[@]} and their valuse ${results[@]}
+for i in ${results[@]}
+do
+	valAr[$((counter++))]="$i"
+done
+
+echo ${valAr[@]}
+echo ${!valAr[@]}
