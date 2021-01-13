@@ -2,6 +2,9 @@
 
 #Welcome to Arithmatic Computation
 
-read -p "Enter a number: " x;
-read -p "Enter a number: " y;
-read -p "Enter a number: " z;
+read -p "Enter a number: " a;
+read -p "Enter a number: " b;
+read -p "Enter a number: " c;
+
+var=$(( a+(b*c) ))
+echo $var
