@@ -36,7 +36,7 @@ while (( loop<=length ))
 do
 	for (( base=0; base<length-1; base++ ))
 	do
-		if (( ${valAr[base]}<${valAr[$((base+1))]} ))
+		if (( ${valAr[base]}>${valAr[$((base+1))]} ))
 		then
 			(( swap=${valAr[base]} ))
 			(( valAr[base]=${valAr[$((base+1))]} ))
