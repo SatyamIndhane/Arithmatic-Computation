@@ -6,5 +6,7 @@ read -p "Enter a number: " a;
 read -p "Enter a number: " b;
 read -p "Enter a number: " c;
 
-var=$(( a+(b*c) ))
-echo $var
+var1=$(( a+(b*c) ))
+var2=$(( (a*b)+c ))
+
+echo $var2
